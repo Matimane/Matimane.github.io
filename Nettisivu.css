@@ -1,42 +1,44 @@
 .header {
   position: fixed;
-  padding: 7%;
-  width: 84%;
-  max-height: 100px;
-  min-width: 200px;
+  padding: 0;
+  width: 98%;
+  height: 170px;
+  min-height: 60px;
   background-color:rgb(143, 124, 211);
-  margin-right: 2%;
   border-radius: 10px;
-  margin-left: 2%;
+
   margin: 0 auto;
-  top: 0;
+  top: 0%;
   left: 50%;
   transform: translateX(-50%);
   z-index: 1;
+  border: none;
 }
-
 
 .hakupalkki {
 
-  width: 105%; 
+  width: 98%; 
   height: 30%;
   max-height: 50px;   
-  padding: 2%;
+  padding: 0;
   font-size: 18px;
   border-radius: 10px;
   border: 0px solid #000000;
   background-color:  rgb(233, 222, 255);
-  margin-top: 5%;
-
-  margin-left: -4.5%;
+  margin-top: 60px;
+  margin-left: 1%;
   box-shadow: #be0000;
+}
+@media (max-width: 440px) {
+  .hakupalkki {
+    margin-top: 45px;
+  }
 }
 
 .kuva-nappi {
   max-width: 90px;
   width: 15%;
   border: none;
-  margin-right: ;
   padding: 0;
   background: none;
   cursor: pointer;
@@ -51,29 +53,49 @@
   padding: 0;
   width: 100%;
   display: block;
-  margin-top: 2%;
-  margin-bottom: -60%;
-  margin-left: -30%;
+  margin-bottom: -100%;
+  margin-left: 40%;
 }
 
 
 .logo {
+  margin: -2%; 
   position: sticky;
   width: 48%;
   max-width: 400px;
-  min-width: 200px;
+  min-width: 300px;
   border: none;
   padding: 0;
   background: none;
   cursor: pointer;
   margin-left: 10%;
-  margin-bottom: -40%;
+  margin-bottom: -200px;
   margin-left: 20%;
-  margin-top: -6%;
+  margin-top: -20px;
   bottom: calc(99%);
 }
-
+@media (min-width: 650px) {
+  .logo {
+    margin-top: -4% !important;
+  }
+}
+@media (min-width: 700px) {
+  .logo {
+    margin-top: -5% !important;
+  }
+}
+@media (min-width: 1000px) {
+  .logo {
+    margin-top: -4% !important;
+  }
+}
+@media (min-width: 1300px) {
+  .logo {
+    margin-top: -3% !important;
+  }
+}
 .Isokuva{
+
 width: 97%;
 
 }
@@ -118,5 +140,5 @@ width: 97%;
   padding-top: 5%;
   font-size: 80%;
   margin-left: 2%;
-  margin-top: 30px;
+  margin-top: 0px;
 }
