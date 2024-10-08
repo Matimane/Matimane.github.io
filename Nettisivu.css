@@ -1,8 +1,8 @@
 .header {
   position: fixed;
-  padding: 6%;
+  padding: 7%;
   width: 84%;
-  height: 90px;
+  max-height: 100px;
   min-width: 200px;
   background-color:rgb(143, 124, 211);
   margin-right: 2%;
@@ -17,14 +17,16 @@
 
 
 .hakupalkki {
+
   width: 105%; 
-  height: 30px;   
+  height: 30%;
+  max-height: 50px;   
   padding: 2%;
   font-size: 18px;
   border-radius: 10px;
   border: 0px solid #000000;
   background-color:  rgb(233, 222, 255);
-  margin-top: 30px;
+  margin-top: 5%;
 
   margin-left: -4.5%;
   box-shadow: #be0000;
@@ -39,27 +41,25 @@
   background: none;
   cursor: pointer;
   margin: -2%; 
+  margin-bottom: 30px;
+  margin-top: -50px;
 }
 
 .kuva-nappi img {
   position: sticky;
-
+  
   padding: 0;
   width: 100%;
   display: block;
-  margin-top: 1%;
-  margin-bottom: -40%;
+  margin-top: 2%;
+  margin-bottom: -60%;
   margin-left: -30%;
-}
-.Isokuva{
-width: 97%;
-
 }
 
 
 .logo {
   position: sticky;
-  width: 50%;
+  width: 48%;
   max-width: 400px;
   min-width: 200px;
   border: none;
@@ -73,6 +73,10 @@ width: 97%;
   bottom: calc(99%);
 }
 
+.Isokuva{
+width: 97%;
+
+}
 .menu {
   z-index: 2;
   height: 100%;
