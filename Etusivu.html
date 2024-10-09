@@ -1,117 +1,199 @@
 <!DOCTYPE html>
 <html lang="fi">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="brbbbrbbbbbrb ">
-  <meta name="author" content="meikä">
-  <link rel="stylesheet" href="Nettisivu.css">
-<title>Käsityöt</title>
-</head>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="brbbbrbbbbbrb " />
+    <meta name="author" content="meikä" />
+    <link rel="stylesheet" href="Nettisivu.css" />
+    <title>Käsityöt</title>
+  </head>
 
-<body style="background-color: rgb(233, 222, 255);">
+  <body style="background: rgb(233, 222, 255)">
+
     <header class="header">
-      <div>  
+      <div>
         <button class="kuva-nappi" onclick="openMenu()">
-          <img src="./Images/liilamenu.png" alt="click me">
-      </button>
-      <a href="http://127.0.0.1:5500/Etusivu.html">
-        <img class="logo" src="./Images/uusiliilalogo.png">
-      </a>
+          <img src="./Images/liilamenu.png" alt="click me" />
+        </button>
+        <a href="http://127.0.0.1:5500/Etusivu.html">
+          <img class="logo" src="./Images/uusiliilalogo.png" />
+        </a>
       </div>
-      <input type="text" class="hakupalkki" placeholder="Etsi...">
+      <input type="text" class="hakupalkki" placeholder=" Etsi..." />
     </header>
     <main class="main">
-      <img class="Isokuva" src="./Images/Isokuva.png">
 
+      <img class="Isokuva" src="./Images/tausta.png" />
+      
+  <h1>Suositut Käsityöt</h1>
+  <div class="suositut">
+    <div class="slidet fade">
+      <div class="numbertext">1 / 3</div>
+      <img src="./Images/suosittu_1.png" style="width: 100%" />
+      <div class="captioni">Makramee Seinäkoriste</div>
+    </div>
 
-      <h1>Suositut Käsityöt</h1>
-        <div class="suositut">
+    <div class="slidet fade">
+      <div class="numbertext">2 / 3</div>
+      <img src="./Images/suosittu_2.png" style="width: 100%" />
+      <div class="captioni">Lautasliinarengas</div>
+    </div>
 
-         
+    <div class="slidet fade">
+      <div class="numbertext">3 / 3</div>
+      <img src="./Images/suosittu_3.png" style="width: 100%" />
+      <div class="captioni">Joku</div>
+    </div>
 
+    <a class="edellinen" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="seuraava" onclick="plusSlides(1)">&#10095;</a>
+  </div>
+  <br />
 
+  <div style="text-align: center">
+    <span class="piste" onclick="currentSlide(1)"></span>
+    <span class="piste" onclick="currentSlide(2)"></span>
+    <span class="piste" onclick="currentSlide(3)"></span>
+  </div>
 
-          <div class="slidet fade">
-            <div class="numbertext">1 / 3</div>
-            <img src="./Images/suosittu_1.png" style="width:100%">
-            <div class="captioni">Makramee Seinäkoriste</div>
-          </div>
-        
-          <div class="slidet fade">
-            <div class="numbertext">2 / 3</div>
-            <img src="./Images/suosittu_2.png" style="width:100%">
-            <div class="captioni">Lautasliinarengas</div>
-          </div>
-        
-          <div class="slidet fade">
-            <div class="numbertext">3 / 3</div>
-            <img src="./Images/suosittu_3.png" style="width:100%">
-            <div class="captioni">Joku</div>
-          </div>
-        
+  <!-- Second Slideshow -->
+  <h1>Toinen Slideshow</h1>
+  <div class="suositut">
+    <div class="slidet2 fade">
+      <div class="numbertext">1 / 3</div>
+      <img src="./Images/suosittu_1.png" style="width: 100%" />
+      <div class="captioni">eka</div>
+    </div>
 
-          <a class="edellinen" onclick="plusSlides(-1)">&#10094;</a>
-          <a class="seuraava" onclick="plusSlides(1)">&#10095;</a>
-        </div>
-        <br>
-        
+    <div class="slidet2 fade">
+      <div class="numbertext">2 / 3</div>
+      <img src="./Images/suosittu_2.png" style="width: 100%" />
+      <div class="captioni">toka</div>
+    </div>
+    <div class="slidet2 fade">
+      <div class="numbertext">3 / 3</div>
+      <img src="./Images/suosittu_3.png" style="width: 100%" />
+      <div class="captioni">kolmas</div>
+    </div>
+    <a class="edellinen" onclick="plusSlides2(-1)">&#10094;</a>
+    <a class="seuraava" onclick="plusSlides2(1)">&#10095;</a>
+  </div>
+  <br />
 
-        <div style="text-align:center">
-          <span class="piste" onclick="currentSlide(1)"></span>
-          <span class="piste" onclick="currentSlide(2)"></span>
-          <span class="piste" onclick="currentSlide(3)"></span>
-        </div>
-<script>
-let slideIndex = 1;
-showSlides(slideIndex);
-
-
-function plusSlides(n) {
-  showSlides(slideIndex += n);
-}
-
-
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
-
-function showSlides(n) {
-  let i;
-  let slides = document.getElementsByClassName("slidet");
-  let dots = document.getElementsByClassName("piste");
-  if (n > slides.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = slides.length}
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
-  }
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex-1].style.display = "block";
-  dots[slideIndex-1].className += " active";
-}</script>
-
-
-
+  <div style="text-align: center">
+    <span class="piste2" onclick="currentSlide2(1)"></span>
+    <span class="piste2" onclick="currentSlide2(2)"></span>
+    <span class="piste2" onclick="currentSlide2(3)"></span>
+  </div>
+  <script>
+    // Eka Slideshow
+    let slideIndex = 1;
+    showSlides(slideIndex);
+    let autoSlide = setInterval(function () {
+      plusSlides(1);
+    }, 3000);
+    
+    function plusSlides(n) {
+      clearInterval(autoSlide);
+      showSlides((slideIndex += n));
+      autoSlide = setInterval(function () {
+        plusSlides(1);
+      }, 3000);
+    }
+    
+    function currentSlide(n) {
+      clearInterval(autoSlide);
+      showSlides((slideIndex = n));
+      autoSlide = setInterval(function () {
+        plusSlides(1);
+      }, 3000);
+    }
+    
+    function showSlides(n) {
+      let i;
+      let slides = document.getElementsByClassName("slidet");
+      let dots = document.getElementsByClassName("piste");
+    
+      if (n > slides.length) {
+        slideIndex = 1;
+      }
+      if (n < 1) {
+        slideIndex = slides.length;
+      }
+    
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex - 1].style.display = "block";
+      dots[slideIndex - 1].className += " active";
+    }
+    
+    // toinen slideshow
+    let slideIndex2 = 1;
+    showSlides2(slideIndex2);
+    let autoSlide2 = setInterval(function () {
+      plusSlides2(1);
+    }, 3000);
+    
+    function plusSlides2(n) {
+      clearInterval(autoSlide2);
+      showSlides2((slideIndex2 += n));
+      autoSlide2 = setInterval(function () {
+        plusSlides2(1);
+      }, 3000);
+    }
+    
+    function currentSlide2(n) {
+      clearInterval(autoSlide2);
+      showSlides2((slideIndex2 = n));
+      autoSlide2 = setInterval(function () {
+        plusSlides2(1);
+      }, 3000);
+    }
+    
+    function showSlides2(n) {
+      let i;
+      let slides = document.getElementsByClassName("slidet2");
+      let dots = document.getElementsByClassName("piste2");
+    
+      if (n > slides.length) {
+        slideIndex2 = 1;
+      }
+      if (n < 1) {
+        slideIndex2 = slides.length;
+      }
+    
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex2 - 1].style.display = "block";
+      dots[slideIndex2 - 1].className += " active";
+    }
+    </script>
     </main>
-      <div id="sivuMenu" class="menu">
-        <a href="javascript:void(0)" class="sulje" onclick="closeMenu()">&times;</a>
-        <a href="http://127.0.0.1:5500/Kasityot.html">Menu</a>
-        
+    <div id="sivuMenu" class="menu">
+      <a href="javascript:void(0)" class="sulje" onclick="closeMenu()"
+        >&times;</a
+      >
+      <a href="http://127.0.0.1:5500/Kasityot.html">Menu</a>
+    </div>
 
-      </div>
+    <script>
+      function openMenu() {
+        document.getElementById("sivuMenu").style.width = "50%";
+      }
 
-      <script>
-function openMenu() {
-  document.getElementById("sivuMenu").style.width = "50%";
-}
-
-// Close the side menu
-function closeMenu() {
-  document.getElementById("sivuMenu").style.width = "0";
-}
-      </script>
-
-</body>
+      // Close the side menu
+      function closeMenu() {
+        document.getElementById("sivuMenu").style.width = "0";
+      }
+    </script>
+  </body>
 </html>
