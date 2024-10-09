@@ -1,5 +1,5 @@
 .header {
-  background-image: url('./Images/Isokuva.png');
+  background-image: url('./Images/isokuva.png');
   background-size: cover;
   background-position: center;
   position: fixed;
@@ -148,6 +148,7 @@
 .Isokuva{
 width: 100%;
 margin-left: -1.5%;
+min-height: 1px;
 margin-top: -3%;
 }
 
