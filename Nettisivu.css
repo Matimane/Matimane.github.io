@@ -353,14 +353,3 @@ background-color: rgba(62, 28, 126, 0.342);
   text-align: center;
   font-family: Arial, sans-serif;
 }
-
-.kasityo:last-child {
-  margin-right: 0;
-}
-
-
-.kasityo-container::after {
-  content: "";
-  display: table;
-  clear: both;
-}
