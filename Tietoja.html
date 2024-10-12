@@ -104,7 +104,22 @@ Kiitos, että vierailit sivustollamme. Toivomme, että löydät iloa ja luovuutt
   style="font-size: 16px; background-color: #c84d4d00; color: white; padding: 10px; text-decoration: none;">
   Copyright
 </a> 
-
+<script>
+    var coll = document.getElementsByClassName("collapsible");
+    var i;
+    
+    for (i = 0; i < coll.length; i++) {
+      coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.display === "block") {
+          content.style.display = "none";
+        } else {
+          content.style.display = "block";
+        }
+      });
+    }
+    </script>
     </div>
 
     <script>
