@@ -14,17 +14,19 @@
     <header class="header">
       <div>
         <button class="kuva-nappi" onclick="openMenu()">
-          <img src="./Images/liilamenu.png" alt="click me" />
+          <img src="./Images/liilamenu.png" alt="click menu" />
         </button>
         <a href="https://matimane.github.io/Etusivu.html">
-          <img class="logo" src="./Images/uusiliilalogo.png" />
+          <img class="logo" src="./Images/uusiliilalogo.png" alt="logo"/>
         </a>
       </div>
-      <input type="text" class="hakupalkki" placeholder=" Etsi..." />
+      <form id="searchForm" onsubmit="return searchFunction(event);" class="hakupalkki">
+        <input type="text" class="hakukentta" placeholder="Etsi..." id="searchInput" />
+      </form>
     </header>
     <main class="main">
-      <sisalto>
-      <img class="isokuva" src="./Images/tausta.png" />
+
+      <img class="isokuva" src="./Images/tausta.png" alt="hero image"/>
       
 <h1> Tietoa Meistä</h1>
 <p style="font-size: 150%;">
@@ -47,25 +49,21 @@ Kiitos, että vierailit sivustollamme. Toivomme, että löydät iloa ja luovuutt
     Copyright
 </h1>
 <p id="copy" style="font-size: 150%;">öhm</p>
-</sisalto>
+
 <div class="footer" style="height: 100px; font-size: 80%;">
   <a href="https://matimane.github.io/Tietoja.html" style="margin-left: 5%; font-size: 150%; background: none;">Tietoa meistä</a>
   <br> <br>
-  <a href="https://matimane.github.io/Tietoja.html#yhteys" style="margin-left: 5%; font-size: 150%;background: none;">Ota yhteyttä</p->
+  <a href="https://matimane.github.io/Tietoja.html#yhteys" style="margin-left: 5%; font-size: 150%;background: none;">Ota yhteyttä</a>
     <br> <br>
   <a href="https://matimane.github.io/Tietoja.html#copy" style="margin-left: 5%; font-size: 150%;background: none;">Copyright</a>
 </div>
 </main>
 <div id="sivuMenu" class="menu">
-  <a href="javascript:void(0)" class="sulje" onclick="closeMenu()"
-  >&times;</a
+  <a href="javascript:void(0)" class="sulje" onclick="closeMenu()">&times;</a
   >
   <a href="https://matimane.github.io/Etusivu.html">Etusivu</a>
   <br>
 
-
-      </head>
-      <body>
 
       <button type="button" class="collapsible">Käsityöt  ></button>
       <div class="content">
@@ -131,6 +129,6 @@ Kiitos, että vierailit sivustollamme. Toivomme, että löydät iloa ja luovuutt
         document.getElementById("sivuMenu").style.width = "0";
       }
     </script>
-
+<c/div>
   </body>
 </html>
