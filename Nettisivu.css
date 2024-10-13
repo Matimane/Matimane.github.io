@@ -132,9 +132,22 @@
     margin-left: 35px;
   }
 }
+@media (min-width: 800px) {
+  .logo {
+    margin-top: -4% !important;
+    margin-left: 25%;
+  }
+  .menu {
+    max-width: 25%;
+  }
+  .kuva-nappi img {
+    margin-left: 45px;
+  }
+}
 @media (min-width: 1000px) {
   .logo {
     margin-top: -4% !important;
+    margin-left: 30%;
   }
   .menu {
     max-width: 25%;
@@ -146,6 +159,7 @@
 @media (min-width: 1300px) {
   .logo {
     margin-top: -3% !important;
+    margin-left: 35%;
   }
   .menu {
     max-width: 20%;
