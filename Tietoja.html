@@ -128,7 +128,15 @@ Kiitos, että vierailit sivustollamme. Toivomme, että löydät iloa ja luovuutt
       function closeMenu() {
         document.getElementById("sivuMenu").style.width = "0";
       }
+      function searchFunction(event) {
+  event.preventDefault();
+
+  const query = document.getElementById("searchInput").value;
+  if (query) {
+    window.location.href = `Kasityot.html?query=${encodeURIComponent(query)}`;
+  }
+}
     </script>
-<c/div>
+</div>
   </body>
 </html>
